@@ -4,41 +4,69 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{% block title %}Titre{% endblock %}</title>
+    <title>{% block title %}DTRE{% endblock %}</title>
 
     {% block stylesheets %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
               integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
               crossorigin="anonymous">
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-                crossorigin="anonymous"></script>
+        <style>
+            body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+            body, html {
+                height: 100%;
+                line-height: 1.8;
+            }
+            /* Full height image header */
+            .bgimg-1 {
+                background-position: center;
+                background-size: cover;
+                background-image: url("{{ asset('assets/images/fond_2.jpg') }}");
+                min-height: 100%;
+            }
+        </style>
+
+
     {% endblock %}
 </head>
 
 <body>
-<div class="container">
-    <div id="header" class="jumbotron">
-        <h1><a href="{{ path('dtre_site_homepage') }}">DTRE</a></h1>
-        <p>
-            L'association de Robotique du Groupe ESIEA
-        </p>
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-left w3-text-white" style="padding:48px">
+        <span class="w3-jumbo w3-hide-small">DTRE</span><br>
+        <span class="w3-xxlarge w3-hide-large w3-hide-medium">DTRE</span><br>
+        <span class="w3-large">Association robotique de l'ESIEA Paris</span>
+        <p><a href="https://www.facebook.com/AssoDTRE/" target="_blank" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Suivez nous sur Facebook</a></p>
     </div>
 
-    <div class="row">
-        <div id="menu" class="col-md-2">
-            <h3>Menu</h3>
-            <ul class="nav nav-pills nav-stacked">
-                <li><a href="{{ path('dtre_site_homepage') }}">Accueil</a> </li>
-            </ul>
-
+</header>
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card-2" id="myNavbar">
+        <a href="{{ path('dtre_site_homepage') }}" class="w3-bar-item w3-button w3-wide"><img src="{{ asset('assets/images/logo.png') }}" width="48px" height="48px"></a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small">
+            <a href="{{ path('dtre_site_about') }}" class="w3-bar-item w3-button">A Propos</a>
+            <a href="{{ path('dtre_site_team') }}" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Notre Equipe</a>
+            <a href="{{ path('dtre_site_event') }}" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Evenements</a>
+            <a href="{{ path('dtre_site_project') }}" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Projets</a>
+            <a href="{{ path('dtre_site_contact') }}" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
         </div>
-        <div id="content" class="col-md-10">
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</div>
+<div class="container">
+
+    <br>
+    <br>
+    <div class="row">
+        <div id="content" class="col-md-12">
             {% block body %}
             {% endblock %}
         </div>
@@ -47,12 +75,15 @@
     <hr>
 
     <footer>
-        <p>Hanotaux Mathieu - Webmaster du Groupe ESIEA 2017 et DTRE- <a href="mailto:hanotaux@et.esiea.fr">hanotaux@et.esiea.fr</a></p>
+        <p>DTRE 2017<a href="mailto:hanotaux@et.esiea.fr">contact@asso-dtre.fr</a></p>
     </footer>
 </div>
 
 {% block javascript %}
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 {% endblock %}
 
 

@@ -1,3 +1,23 @@
 dtre_site_homepage:
-    path:     /
+    path:     /home
     defaults: { _controller: DTRESiteBundle:Default:index }
+
+dtre_site_team:
+    path:     /team
+    defaults: { _controller: DTRESiteBundle:Default:team }
+
+dtre_site_project:
+    path:     /project
+    defaults: { _controller: DTRESiteBundle:Default:project }
+
+dtre_site_event:
+    path:     /event
+    defaults: { _controller: DTRESiteBundle:Default:event }
+
+dtre_site_about:
+    path:     /about
+    defaults: { _controller: DTRESiteBundle:Default:about }
+
+dtre_site_contact:
+    path:     /contact
+    defaults: { _controller: DTRESiteBundle:Default:contact }

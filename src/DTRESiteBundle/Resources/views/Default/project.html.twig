@@ -1,0 +1,45 @@
+{% extends "DTRESiteBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ parent() }}
+{% endblock %}
+
+{% block bundle_body %}
+
+    <h2>Les Projets</h2>
+    <hr>
+
+    <p>Chaque année la DTRE propose plusieurs projets aux étudiants de l'ESIEA en 2, 3 et 4ème année à l'occasion des PST,
+        <a href="https://www.esiea.fr/esiea-techdays-2017-projets-scientifiques-et-techniques-4a/"
+           alt="Projets Scientifiques et techniques de 4ème année" target="_blank">Projets Scientifiques et Techniques</a>.
+    La DTRE propose des sujets, finance les 1projets et accompagne des équipes d'étudiants motivés tout au long des projets </p>
+    <br>
+<div class="row">
+    <h3>L'oeil de la DTRE</h3>
+
+    <p><u>Description du projet :</u><br>
+        <br>
+        <i>Pour sécuriser la DTRE, nous allons réaliser un système de surveillance autonome. Ce projet comprendra une caméra qui peut modifier son angle de vue sur 2 axes à l'aide de deux servomoteurs reliés à une carte Raspberry Pi. Ces vidéos seront disponibles en temps réel sur notre site internet, depuis lequel on pourra choisir l'angle de vue de notre caméra.
+    Le site permettra de gérer les heures de surveillance des locaux et d’activer ou non l’enregistrement vidéo 24/24.
+    Ces fonctionnalités seront disponibles pour tous les membres autorisés de la DTRE possédant un compte sur notre site. En cas de détection d’une activité pendant la période de surveillance, le système enverra un mail avec le lien de la vidéo enregistrée. Une application mobile sera aussi disponible sur Android avec les mêmes fonctionnalités que le site.
+    Notre produit apporte une dimension domotique à la DTRE. Grâce à différents capteurs positionnés intelligemment, la DTRE pourra surveiller sa consommation d’électricité, chauffage, lumière, et savoir si quelqu’un est présent à la DTRE jour et nuit en toutes circonstances. On espère aussi pouvoir associer notre projet à d'autres projets domotique comme par exemple leur système d’ouverture de porte avec passe RFID ou le tank mobile connecté possédant une caméra Infrarouge.
+            En étudiant toutes les données reçues par nos capteurs perfectionnés, notre projet permettra, sur le long terme, de faire des économies.</i></p>
+
+    <p>Le site web du projet est à l'adresse suivante : <a target="_blank" alt="Site du projet oeil de la DTRE" href="https://oeildt.hanotaux.fr">oeildtre.fr</a></p>
+
+    <iframe align="left" src="https://docs.google.com/presentation/d/1UVa4XTh3kncvkYPwjVPux6-FXKNVI-G1xuE_zsCd_ck/embed?start=false&loop=false&delayms=3000"
+                frameborder="0" width="700" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <br>
+</div>
+
+    <br>
+
+    <h3>Le robot héxapode</h3>
+
+
+{% endblock %}
+
+{% block bundle_javascript %}
+
+
+{% endblock %}

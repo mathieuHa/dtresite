@@ -1,4 +1,11 @@
+root:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /dtre/home
+        permanent: true
+
 dtre_site:
     resource: "@DTRESiteBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /dtre
 
