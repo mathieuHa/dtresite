@@ -26,6 +26,9 @@
                 background-image: url("{{ asset('assets/images/fond_2.jpg') }}");
                 min-height: 100%;
             }
+            .navbar {
+                margin-bottom: -2px;
+            }
         </style>
 
 
@@ -33,18 +36,19 @@
 </head>
 
 <body>
-<!-- Sidebar on small screens when clicking the menu icon -->
+
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{ path('dtre_site_homepage') }}">
-                <img src="{{ asset('assets/images/logo.png') }}" width="30px" height="30px">
+                <img src="{{ asset('assets/images/logo.png') }}" width="34px" height="34px">
             </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -58,15 +62,15 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-    <div class="w3-display-left w3-text-white" style="padding:48px">
-        <span class="w3-jumbo w3-hide-small">DTRE</span><br>
-        <span class="w3-xxlarge w3-hide-large w3-hide-medium">DTRE</span><br>
-        <span class="w3-large">Association robotique de l'ESIEA Paris</span>
-        <p><a href="https://www.facebook.com/AssoDTRE/" target="_blank" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Suivez nous sur Facebook</a></p>
-    </div>
-</header>
-<div class="container">
+    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+        <div class="w3-display-left w3-text-white" style="padding:48px">
+            <span class="w3-jumbo w3-hide-small">DTRE</span><br>
+            <span class="w3-xxlarge w3-hide-large w3-hide-medium">DTRE</span><br>
+            <span class="w3-large">Association robotique de l'ESIEA Paris</span>
+            <p><a href="https://www.facebook.com/AssoDTRE/" target="_blank" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Suivez nous sur Facebook</a></p>
+        </div>
+    </header>
+    <div class="container">
 
     <br>
     <br>
