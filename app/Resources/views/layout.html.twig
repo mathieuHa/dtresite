@@ -18,7 +18,6 @@
             body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
             body, html {
                 height: 100%;
-                line-height: 1.8;
             }
             /* Full height image header */
             .bgimg-1 {
@@ -34,6 +33,31 @@
 </head>
 
 <body>
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ path('dtre_site_homepage') }}">
+                <img src="{{ asset('assets/images/logo.png') }}" width="30px" height="30px">
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ path('dtre_site_about') }}"  class="navbar-text navbar-right"> A Propos</a></li>
+                <li><a href="{{ path('dtre_site_team') }}"  class="navbar-text navbar-right"> Notre Equipe</a></li>
+                <li><a href="{{ path('dtre_site_event') }}"  class="navbar-text navbar-right"> Evenements</a></li>
+                <li><a href="{{ path('dtre_site_project') }}" class="navbar-text navbar-right"> Projets</a></li>
+                <li><a href="{{ path('dtre_site_contact') }}"  class="navbar-text navbar-right"> Contact</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
     <div class="w3-display-left w3-text-white" style="padding:48px">
         <span class="w3-jumbo w3-hide-small">DTRE</span><br>
@@ -41,26 +65,7 @@
         <span class="w3-large">Association robotique de l'ESIEA Paris</span>
         <p><a href="https://www.facebook.com/AssoDTRE/" target="_blank" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Suivez nous sur Facebook</a></p>
     </div>
-
 </header>
-<div class="w3-top">
-    <div class="w3-bar w3-white w3-card-2" id="myNavbar">
-        <a href="{{ path('dtre_site_homepage') }}" class="w3-bar-item w3-button w3-wide"><img src="{{ asset('assets/images/logo.png') }}" width="48px" height="48px"></a>
-        <!-- Right-sided navbar links -->
-        <div class="w3-right w3-hide-small">
-            <a href="{{ path('dtre_site_about') }}" class="w3-bar-item w3-button">A Propos</a>
-            <a href="{{ path('dtre_site_team') }}" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Notre Equipe</a>
-            <a href="{{ path('dtre_site_event') }}" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Evenements</a>
-            <a href="{{ path('dtre_site_project') }}" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Projets</a>
-            <a href="{{ path('dtre_site_contact') }}" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
-        </div>
-        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-</div>
 <div class="container">
 
     <br>
